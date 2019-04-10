@@ -11,7 +11,7 @@ import javax.inject.Inject
 class MainViewModel @Inject constructor(private val mRepo: RepositorySource) :
     ViewModel(), LifecycleObserver {
 
-    val currencyList = mutableListOf<Vehicle>()
+    val vehiclesList = mutableListOf<Vehicle>()
     val notifyUpdate = MutableLiveData<Boolean>()
     val notifyLoading = MutableLiveData<Boolean>()
     val notifyFinished = MutableLiveData<Boolean>()
@@ -20,7 +20,7 @@ class MainViewModel @Inject constructor(private val mRepo: RepositorySource) :
         notifyLoading.value = true
         mRepo.getVehicles(callBacks = object : NetworkCallBacks.BaseNetworkCallBacks<List<Vehicle>> {
             override fun onSuccess(result: List<Vehicle>) {
-                currencyList.addAll(result)
+                vehiclesList.addAll(result)
                 notifyUpdate.value = true
                 notifyFinished.value = true
             }

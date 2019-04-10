@@ -36,16 +36,16 @@ class MainFragment : BaseFragment(), OnMapReadyCallback {
         mapFragment.getMapAsync(this)
         viewModel.notifyUpdate.observe(this, Observer {
             val builder = LatLngBounds.builder()
-            for (i in 0 until viewModel.currencyList.size) {
-                builder.include(LatLng(viewModel.currencyList[i].latitude, viewModel.currencyList[i].longitude))
+            for (i in 0 until viewModel.vehiclesList.size) {
+                builder.include(LatLng(viewModel.vehiclesList[i].latitude, viewModel.vehiclesList[i].longitude))
                 mMap.addMarker(
                     MarkerOptions()
-                        .position(LatLng(viewModel.currencyList[i].latitude, viewModel.currencyList[i].longitude))
-                        .title(getString(R.string.name) + " " + viewModel.currencyList[i].name)
+                        .position(LatLng(viewModel.vehiclesList[i].latitude, viewModel.vehiclesList[i].longitude))
+                        .title(getString(R.string.name) + " " + viewModel.vehiclesList[i].name)
                         .snippet(
-                            getString(R.string.price) + viewModel.currencyList[i].price + " " + viewModel.currencyList[i].currency
-                                    + "\n" + getString(R.string.battery_level) + " " + viewModel.currencyList[i].batteryLevel
-                                    + "\n" + getString(R.string.description) + " " + viewModel.currencyList[i].description
+                            getString(R.string.price) + viewModel.vehiclesList[i].price + " " + viewModel.vehiclesList[i].currency
+                                    + "\n" + getString(R.string.battery_level) + " " + viewModel.vehiclesList[i].batteryLevel
+                                    + "\n" + getString(R.string.description) + " " + viewModel.vehiclesList[i].description
                         )
                 )
             }
