@@ -1,7 +1,6 @@
-package com.example.currencyhistory.model
+package com.tasks.flash.model
 
 import com.google.gson.Gson
-import com.tasks.flash.model.Vehicle
 import org.junit.Assert
 import org.junit.Before
 import org.junit.Test

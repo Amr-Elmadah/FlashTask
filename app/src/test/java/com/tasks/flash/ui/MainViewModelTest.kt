@@ -1,10 +1,9 @@
-package com.example.currencyhistory.ui
+package com.tasks.flash.ui
 
 import androidx.arch.core.executor.testing.InstantTaskExecutorRule
 import androidx.lifecycle.Lifecycle
 import com.example.currencyhistory.TestLifecycleOwner
 import com.tasks.flash.dataSource.RepositorySource
-import com.tasks.flash.ui.MainViewModel
 import org.junit.Assert
 import org.junit.Before
 import org.junit.Rule
