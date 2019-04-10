@@ -1,4 +1,8 @@
 <resources>
     <string name="app_name">FlashTask</string>
-    <string name="title_activity_maps">Map</string>
+    <string name="internet_connection">No internet connection</string>
+    <string name="name">Name : </string>
+    <string name="price">Price : </string>
+    <string name="description">Description : </string>
+    <string name="battery_level">Battery Level : </string>
 </resources>
